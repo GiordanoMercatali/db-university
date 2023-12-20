@@ -7,3 +7,8 @@ LIMIT 160;
 SELECT * FROM `courses`
 WHERE `cfu` > 10
 LIMIT 479;
+
+-- 4. Select all courses of the first semester of the first year
+SELECT * FROM `courses`
+WHERE `year` = 1 AND `period` LIKE 'I semestre'
+LIMIT 286;
