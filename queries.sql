@@ -12,3 +12,8 @@ LIMIT 479;
 SELECT * FROM `courses`
 WHERE `year` = 1 AND `period` LIKE 'I semestre'
 LIMIT 286;
+
+-- 5. Select all exams that take place in the afternoon of 2020/06/20
+SELECT * FROM `exams`
+WHERE HOUR(`hour`) = 14 AND DATE(`date`) = '2020-06-20'
+LIMIT 21;
