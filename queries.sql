@@ -17,3 +17,8 @@ LIMIT 286;
 SELECT * FROM `exams`
 WHERE HOUR(`hour`) = 14 AND DATE(`date`) = '2020-06-20'
 LIMIT 21;
+
+-- 6. Select all master's degrees
+SELECT * FROM `degrees`
+WHERE `name` LIKE '%Magistrale%'
+LIMIT 38;
