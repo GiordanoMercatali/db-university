@@ -6,6 +6,10 @@ WHERE `date_of_birth` LIKE '1990%';
 SELECT * FROM `courses`
 WHERE `cfu` > 10;
 
+-- 3. Select all students older than 30 years
+SELECT * FROM `students`
+WHERE DATE_FORMAT(FROM_DAYS(DATEDIFF(NOW(), date_of_birth)), '%e') > 30;
+
 -- 4. Select all courses of the first semester of the first year
 SELECT * FROM `courses`
 WHERE `year` = 1 AND `period` LIKE 'I semestre';
