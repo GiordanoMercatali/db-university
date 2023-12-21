@@ -23,3 +23,9 @@ SELECT * FROM `students`
 INNER JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id`
 INNER JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
 ORDER BY `students`.`surname` ASC, `students`.`name` ASC;
+
+-- 5. Select all degrees with all the info on their courses and teachers
+SELECT * FROM `degrees`
+INNER JOIN `courses` ON `courses`.`degree_id` = `degrees`.`id`
+JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
+JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`;
