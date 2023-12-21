@@ -1,10 +1,13 @@
 -- 1. Select all students born in 1990
 SELECT * FROM `students`
-WHERE `date_of_birth` LIKE '1990%';
+WHERE `date_of_birth` LIKE '1990%'
+ORDER BY `date_of_birth` DESC;
+-- WHERE YEAR(`date_of_birth`) = 1990;
 
 -- 2. Select all courses which cfu is more than 10
 SELECT * FROM `courses`
-WHERE `cfu` > 10;
+WHERE `cfu` > 10
+ORDER BY `cfu` ASC;
 
 -- 3. Select all students older than 30 years
 SELECT * FROM `students`
