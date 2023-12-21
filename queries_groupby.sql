@@ -13,3 +13,8 @@ SELECT `exam_id`, AVG(`vote`) as `votes_average`
 FROM `exam_student`
 -- WHERE `vote` >= 18 AND `vote` <= 30 in case we wanted to count only the students who passed the exam
 GROUP BY `exam_id`;
+
+-- 4. Count how many degrees there are in each department
+SELECT COUNT(*) as `degrees_per_department`, `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
