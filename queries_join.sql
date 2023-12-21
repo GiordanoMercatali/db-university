@@ -12,3 +12,8 @@ WHERE  `departments`.`name` = 'Dipartimento di Neuroscienze' AND `degrees`.`leve
 -- INNER JOIN `degrees` ON `degrees`.`department_id` = `departments`.`id`
 -- WHERE  `departments`.`name` = 'Dipartimento di Neuroscienze' AND `degrees`.`level` = 'Magistrale';
 
+-- 3. Select all courses in which Fulvio Amato teaches
+SELECT * FROM `courses`
+INNER JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
+INNER JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+WHERE `teachers`.`name` = 'Fulvio' AND `teachers`.`surname` = 'Amato';
